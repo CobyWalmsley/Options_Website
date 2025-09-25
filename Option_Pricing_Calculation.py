@@ -151,14 +151,14 @@ def binomial_model(t_days,vol,risk_free_rate,stock_price,strike_price,contract_t
     layer_list[0][0]=stock_price
     for layer in range(len(layer_list)-1):
         for price in range(len(layer_list[layer])):
-            layer_list[layer+1][price] = layer_list[layer][price]+u
-        layer_list[layer+1][-1]=layer_list[layer][-1]-d
+            layer_list[layer+1][price] = layer_list[layer][price]*u
+        layer_list[layer+1][-1]=layer_list[layer][-1]*d
 
-    if contract_type=='Call':
+    if contract_type=='Put':
         option_list[-1] = strike_price-layer_list[-1]
         option_list[-1][option_list[-1]<0]=0
     
-    if contract_type=='Put':
+    if contract_type=='Call':
         option_list[-1] = layer_list[-1]-strike_price
         option_list[-1][option_list[-1]<0]=0
     
