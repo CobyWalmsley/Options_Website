@@ -190,50 +190,53 @@ else:
 
     # ---- Sticky banner injected with base64 image ----
     st.markdown(f"""
-        <style>
-        .block-container {{
-            padding-top: 4rem !important;
-        }}
-        .lehigh-sticky-banner {{
-            position: fixed;
-            top: 10;
-            left: 16rem;
-            right: 0;
-            z-index: 9999;
-            background-color: #5D432C;
-            color: white;
-            padding: 18px 28px;
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-            border-bottom: 2px solid #4A3420;
-        }}
-        .lehigh-sticky-banner img {{
-            height: 56px;
-        }}
-        .lehigh-sticky-banner .title {{
-            font-size: 26px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 0;
-        }}
-        .lehigh-sticky-banner .subtext {{
-            font-size: 15px;
-            margin: 2px 0 0 0;
-            opacity: 0.9;
-        }}
-        </style>
+    <style>
+    /* Sticky brown banner */
+    .lehigh-sticky-banner {{
+        position: fixed;
+        top: 48px;   /* height of Streamlit toolbar, usually ~48px */
+        left: 16rem; 
+        right: 0;
+        z-index: 9999;
+        background-color: #5D432C;
+        color: white;
+        padding: 18px 28px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        border-bottom: 2px solid #4A3420;
+        height: 80px;  /* banner height */
+    }}
+    .lehigh-sticky-banner img {{
+        height: 56px;
+    }}
+    .lehigh-sticky-banner .title {{
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+    }}
+    .lehigh-sticky-banner .subtext {{
+        font-size: 15px;
+        margin: 2px 0 0 0;
+        opacity: 0.9;
+    }}
 
-        <div class="lehigh-sticky-banner">
-            <img src="{img_base64_str}" alt="Lehigh Logo">
-            <div>
-                <div class="title">Options and Volatility | American and European Option Pricing + Greeks</div>
-                <div class="subtext">Coby Walmsley • Lehigh University Masters in Financial Engineering</div>
-            </div>
+    /* Push content below both toolbar + banner */
+    .main .block-container {{
+        padding-top: 140px !important; /* toolbar (48px) + banner (80px) + some spacing */
+    }}
+    </style>
+
+    <div class="lehigh-sticky-banner">
+        <img src="{img_base64_str}" alt="Lehigh Logo">
+        <div>
+            <div class="title">Options and Volatility | American and European Option Pricing + Greeks</div>
+            <div class="subtext">Coby Walmsley • Lehigh University Masters in Financial Engineering</div>
         </div>
-    """, unsafe_allow_html=True)
-
+    </div>
+""", unsafe_allow_html=True)
 col1,col2 = st.columns(2)
 
 with col2:
