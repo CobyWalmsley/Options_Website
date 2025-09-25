@@ -67,8 +67,7 @@ else:
             <div class="title">Options and Volatility | American and European Option Pricing + Greeks</div>
             <div class="subtext">Coby Walmsley • Lehigh University Masters in Financial Engineering</div>
         </div>
-    </div>
-""", unsafe_allow_html=True)
+    </div> """, unsafe_allow_html=True)
 st.write("")
 st.write("")
 st.write("")
