@@ -192,7 +192,7 @@ else:
     st.markdown(f"""
         <style>
         .block-container {{
-            padding-top: 10rem !important;
+            padding-top: 8rem !important;
         }}
         .lehigh-sticky-banner {{
             position: fixed;
