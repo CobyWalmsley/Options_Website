@@ -194,7 +194,7 @@ else:
     /* Sticky brown banner */
     .lehigh-sticky-banner {{
         position: fixed;
-        top: 55px;   /* keep banner just below Streamlit toolbar */
+        top: 55px;   /* just below Streamlit’s toolbar */
         left: 16rem;
         right: 0;
         z-index: 9999;
@@ -223,9 +223,9 @@ else:
         opacity: 0.9;
     }}
 
-    /* Push main content below toolbar + banner */
-    .stAppViewContainer .main .block-container {{
-        padding-top: 200px !important;
+    /* Push Streamlit content down */
+    div[data-testid="stAppViewContainer"] > .main > div {{
+        padding-top: 200px !important;  /* adjust as needed */
     }}
     </style>
 
