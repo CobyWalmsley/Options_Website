@@ -224,7 +224,7 @@ else:
     <div class="lehigh-sticky-banner">
         <img src="{img_base64_str}" alt="Lehigh Logo">
         <div>
-            <div class="title">Options and Volatility | American and European Option Pricing + Greeks</div>
+            <div class="title">Options and Volatility | Volatility Surface Creation</div>
             <div class="subtext">Coby Walmsley • Lehigh University Masters in Financial Engineering</div>
         </div>
     </div>
