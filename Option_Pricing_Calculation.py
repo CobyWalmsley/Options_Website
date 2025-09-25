@@ -194,7 +194,7 @@ else:
     /* Sticky brown banner */
     .lehigh-sticky-banner {{
         position: fixed;
-        top: 65px;   /* height of Streamlit toolbar, usually ~48px */
+        top: 55px;   /* height of Streamlit toolbar, usually ~48px */
         left: 16rem; 
         right: 0;
         z-index: 9999;
