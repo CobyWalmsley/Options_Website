@@ -237,7 +237,7 @@ st.title('Create a Volatility Surface')
 st.write('Strike prices at different dates always imply different volatilities, and traders that make volatility plays need to know the implied volatility at different times and strike prices')
 st.write('The 3-Dimensional graph of Strike Price-Time-Implied Volatility is called the volatility surface')
 st.write('This function imports real options data from a currently traded stock to graph a volatility surface.')
-st.write('(The function takes around 30 seconds to run depending on your computer speed)')
+st.write('(The function takes around 30 seconds to run depending on computer performance)')
 col1,col2 = st.columns(2)
 with col2:
     with st.form("calc_form"):
