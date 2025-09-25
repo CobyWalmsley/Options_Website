@@ -225,7 +225,7 @@ else:
 
     /* Push content below both toolbar + banner */
     .main .block-container {{
-        padding-top: 185px !important; /* toolbar (48px) + banner (80px) + some spacing */
+        padding-top: 140px !important; /* toolbar (48px) + banner (80px) + some spacing */
     }}
     </style>
 
