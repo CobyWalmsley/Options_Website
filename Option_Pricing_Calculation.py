@@ -196,7 +196,7 @@ else:
         }}
         .lehigh-sticky-banner {{
             position: fixed;
-            top: 6;
+            top: 10;
             left: 16rem;
             right: 0;
             z-index: 9999;
