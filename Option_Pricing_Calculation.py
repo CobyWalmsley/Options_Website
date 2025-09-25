@@ -194,8 +194,8 @@ else:
     /* Sticky brown banner */
     .lehigh-sticky-banner {{
         position: fixed;
-        top: 55px;   /* height of Streamlit toolbar, usually ~48px */
-        left: 16rem; 
+        top: 55px;   /* keep banner just below Streamlit toolbar */
+        left: 16rem;
         right: 0;
         z-index: 9999;
         background-color: #5D432C;
@@ -206,7 +206,7 @@ else:
         gap: 18px;
         font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
         border-bottom: 4px solid #4A3420;
-        height: 80px;  /* banner height */
+        height: 80px;
     }}
     .lehigh-sticky-banner img {{
         height: 56px;
@@ -223,9 +223,9 @@ else:
         opacity: 0.9;
     }}
 
-    /* Push content below both toolbar + banner */
-    .main .block-container {{
-        padding-top: 200px !important; /* toolbar (48px) + banner (80px) + some spacing */
+    /* Push main content below toolbar + banner */
+    .stAppViewContainer .main .block-container {{
+        padding-top: 200px !important;
     }}
     </style>
 
