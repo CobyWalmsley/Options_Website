@@ -194,7 +194,7 @@ else:
     /* Sticky brown banner */
     .lehigh-sticky-banner {{
         position: fixed;
-        top: 70px;   /* height of Streamlit toolbar, usually ~48px */
+        top: 100px;   /* height of Streamlit toolbar, usually ~48px */
         left: 16rem; 
         right: 0;
         z-index: 9999;
@@ -205,7 +205,7 @@ else:
         align-items: center;
         gap: 18px;
         font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-        border-bottom: 2px solid #4A3420;
+        border-bottom: 4px solid #4A3420;
         height: 80px;  /* banner height */
     }}
     .lehigh-sticky-banner img {{
