@@ -19,8 +19,7 @@ if not os.path.exists(img_path):
     st.error(f"Image file not found: {img_path}")
 else:
     img_base64_str = get_base64_image(img_path)
-
-     # ---- Sticky banner injected with base64 image ----
+    # ---- Sticky banner injected with base64 image ----
     st.markdown(f"""
     <style>
     /* Sticky brown banner */
@@ -67,10 +66,13 @@ else:
             <div class="title">Options and Volatility | American and European Option Pricing + Greeks</div>
             <div class="subtext">Coby Walmsley • Lehigh University Masters in Financial Engineering</div>
         </div>
-    </div> """, unsafe_allow_html=True)
+    </div>
+""", unsafe_allow_html=True)
 st.write("")
 st.write("")
 st.write("")
+
+     
 
     st.title('Black-Scholes Option Pricing Model')
     st.write("The Black-Scholes Pricing Model is an equation for pricing European Options, which can only be exercised on the date of their maturity.")
