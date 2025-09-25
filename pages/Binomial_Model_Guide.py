@@ -19,51 +19,58 @@ if not os.path.exists(img_path):
 else:
     img_base64_str = get_base64_image(img_path)
 
-    # ---- Sticky banner injected with base64 image ----
+     # ---- Sticky banner injected with base64 image ----
     st.markdown(f"""
-        <style>
-        .block-container {{
-            padding-top: 6rem !important;
-        }}
-        .lehigh-sticky-banner {{
-            position: fixed;
-            top: 0;
-            left: 16rem;
-            right: 0;
-            z-index: 9999;
-            background-color: #5D432C;
-            color: white;
-            padding: 18px 28px;
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-            border-bottom: 2px solid #4A3420;
-        }}
-        .lehigh-sticky-banner img {{
-            height: 56px;
-        }}
-        .lehigh-sticky-banner .title {{
-            font-size: 26px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 0;
-        }}
-        .lehigh-sticky-banner .subtext {{
-            font-size: 15px;
-            margin: 2px 0 0 0;
-            opacity: 0.9;
-        }}
-        </style>
+    <style>
+    /* Sticky brown banner */
+    .lehigh-sticky-banner {{
+        position: fixed;
+        top: 55px;   /* just below Streamlit’s toolbar */
+        left: 16rem;
+        right: 0;
+        z-index: 9999;
+        background-color: #5D432C;
+        color: white;
+        padding: 18px 28px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        border-bottom: 4px solid #4A3420;
+        height: 80px;
+    }}
+    .lehigh-sticky-banner img {{
+        height: 56px;
+    }}
+    .lehigh-sticky-banner .title {{
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+    }}
+    .lehigh-sticky-banner .subtext {{
+        font-size: 15px;
+        margin: 2px 0 0 0;
+        opacity: 0.9;
+    }}
 
-        <div class="lehigh-sticky-banner">
-            <img src="{img_base64_str}" alt="Lehigh Logo">
-            <div>
-                <div class="title">Options and Volatility | Binomial Pricing Model Guide</div>
-                <div class="subtext">Coby Walmsley • Lehigh University Masters in Financial Engineering</div>
-            </div>
+    /* Push Streamlit content down */
+    div[data-testid="stAppViewContainer"] > .main > div {{
+        padding-top: 200px !important;  /* adjust as needed */
+    }}
+    </style>
+
+    <div class="lehigh-sticky-banner">
+        <img src="{img_base64_str}" alt="Lehigh Logo">
+        <div>
+            <div class="title">Options and Volatility | American and European Option Pricing + Greeks</div>
+            <div class="subtext">Coby Walmsley • Lehigh University Masters in Financial Engineering</div>
         </div>
-    """, unsafe_allow_html=True)
+    </div>
+""", unsafe_allow_html=True)
+st.write("")
+st.write("")
+st.write("")
 
 st.title('Binomial Option Pricing Model')
 st.write('Why use the Binomial Option Pricing Model when the Black-Scholes Model Exists?')
